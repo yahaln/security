@@ -1,0 +1,33 @@
+server:  
+  port: 8084  
+  session-timeout: 30  
+  tomcat.max-threads: 0  
+  tomcat.uri-encoding: UTF-8  
+  
+spring:
+  session:
+    store-type: redis  
+  datasource:  
+    url : jdbc:mysql://localhost:3306/webconsole  
+    username : root  
+    password :   
+    driverClassName : com.mysql.jdbc.Driver  
+  jpa:  
+    database : MYSQL  
+    show-sql : true  
+    hibernate:  
+      ddl-auto : update  
+      naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy  
+    properties:  
+      hibernate:  
+        dialect : org.hibernate.dialect.MySQL5Dialect  
+  redis: 
+    database:  1  
+    host : 127.0.0.1  
+    port : 6379  
+    password :  
+    pool: 
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0  
